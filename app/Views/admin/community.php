@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
                 <h3>Organisasi</h3>
-                <p class="text-subtitle text-muted">Menampilkan semua artikel pada website</p>
+                <p class="text-subtitle text-muted">Menampilkan Organisasi Terkait</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
@@ -19,7 +19,7 @@
         </div>
     </div>
     <section class="section">
-        <a href="<?= route_to('community-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Buat artikel</a>
+        <a href="<?= route_to('community-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Organisasi</a>
 
         <?php foreach ($community as $communitys) : ?>
             <div class="card mb-2">
