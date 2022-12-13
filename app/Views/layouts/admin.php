@@ -63,7 +63,7 @@
                         <li class="sidebar-item <?= get_url(3, 'article') ? 'active' : '' ?>">
                             <a href="<?= route_to('article'); ?>" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Article</span>
+                                <span>Artikel</span>
                             </a>
                         </li>
 
@@ -71,7 +71,7 @@
                         <li class="sidebar-item <?= get_url(3, 'community') ? 'active' : '' ?>">
                             <a href="<?= route_to('community'); ?>" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-medical-fill"></i>
-                                <span>Community</span>
+                                <span>Organisasi</span>
                             </a>
                         </li>
                         <?php endif; ?>
@@ -80,17 +80,17 @@
                         <li class="sidebar-item <?= get_url(3, 'category') ? 'active' : '' ?>">
                             <a href="<?= route_to('category'); ?>" class='sidebar-link'>
                                 <i class="bi bi-grid-1x2-fill"></i>
-                                <span>Category</span>
+                                <span>Kategori</span>
                             </a>
                         </li>
                         <?php endif; ?>
 
-                        <li class="sidebar-title">Setting</li>
+                        <li class="sidebar-title">Pengaturan</li>
 
                         <li class="sidebar-item <?= get_url(3, 'setting') ? 'active' : '' ?>">
                             <a data-turbolinks="false" href="<?= route_to('setting'); ?>" class='sidebar-link'>
                                 <i class="bi bi-person-fill"></i>
-                                <span>Account</span>
+                                <span>Akun</span>
                             </a>
                         </li>
 
@@ -98,7 +98,7 @@
                             <li class="sidebar-item <?= get_url(3, 'users') ? 'active' : '' ?>">
                                 <a data-turbolinks="false" href="<?= route_to('users'); ?>" class='sidebar-link'>
                                     <i class="bi bi-people-fill"></i>
-                                    <span>Management Users</span>
+                                    <span>Manajemen Akun</span>
                                 </a>
                             </li>
                         <?php endif; ?>

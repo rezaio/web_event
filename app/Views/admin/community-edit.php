@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
                 <h3>Artikel Editor </h3>
-                <p class="text-subtitle text-muted">Lorem ipsum dolor sit amet
+                <p class="text-subtitle text-muted">Edit Organisasi Pada Website
                 </p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">

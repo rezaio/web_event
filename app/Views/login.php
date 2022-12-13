@@ -29,7 +29,7 @@
               <div class="brand-logo">
                 <img src="<?= base_url(); ?>/assets/img/icon.png" alt="logo">
               </div>
-              <h3>Hello! Selamat datang admin</h3>
+              <h3>Hello! Selamat datang </h3>
               <h6 class="font-weight-light">silahkan masuk dengan akun anda</h6>
 
               <?php if (session()->getFlashdata('msg')) : ?>

@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 <div class="page-heading">
-    <h3>Website Statistics</h3>
+    <h3>Dashboard</h3>
 </div>
 <div class="page-content">
     <section class="row">
@@ -18,25 +18,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Web Visitors Today</h6>
+                                    <h6 class="text-muted font-semibold">Pengunjung web</h6>
                                     <h6 class="font-extrabold mb-0"><?= $visitor_web; ?></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 col-6">
-                    <div class="card">
-                        <div class="card-body px-3 py-4-5">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="stats-icon blue">
-                                        <i class="iconly-boldProfile"></i>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Lab Visitors Today</h6>
-                                    <h6 class="font-extrabold mb-0"><?= $visitor_lab; ?></h6>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +35,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Article Publish</h6>
+                                    <h6 class="text-muted font-semibold">Artikel Publish</h6>
                                     <h6 class="font-extrabold mb-0"><?= $article; ?></h6>
                                 </div>
                             </div>
@@ -74,18 +57,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Web Visitors this year</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="chart-profile-visit"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
