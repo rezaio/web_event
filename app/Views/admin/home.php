@@ -47,7 +47,7 @@
                         <div class="card-body py-4 px-5">
                             <div class="d-flex align-items-center">
                                 <div class="avatar avatar-xl">
-                                    <img src="<?= base_url(); ?>/assets/images/faces/1.jpg" alt="Face 1">
+                                    <img src="<?= base_url(); ?>/assets/images/faces/2.jpg" alt="Face 1">
                                 </div>
                                 <div class="ms-3 name">
                                     <h5 class="font-bold"><?= $user['name']; ?></h5>

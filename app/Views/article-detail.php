@@ -29,14 +29,7 @@
         <div class="page-head-blog">
           <div class="single-blog-page">
             <!-- search option start -->
-            <form action="#">
-              <div class="search-option">
-                <input type="text" placeholder="Search...">
-                <button class="button" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
+      
             <!-- search option end -->
           </div>
           <div class="single-blog-page">
@@ -50,7 +43,7 @@
             ?>
                 <div class="recent-single-post">
                   <div class="post-img">
-                    <a href="#">
+                    <a href="<?= base_url(); ?>/article/<?= $articlex['slug']; ?>">
                       <img src="<?= base_url(); ?>/img/<?= $articlex['thumbnail']; ?>" alt="">
                     </a>
                   </div>
@@ -91,7 +84,7 @@
             <!-- single-blog start -->
             <article class="blog-post-wrapper">
               <div class="post-thumbnail">
-                <img src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="" />
+                <img class="bar" src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="" />
               </div>
               <div class="post-information">
                 <h2><?= $article['title']; ?></h2>
