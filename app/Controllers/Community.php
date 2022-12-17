@@ -42,7 +42,7 @@ class Community extends BaseController
             'thumbnail' => $thumbnailName,
         ]);
 
-        session()->setFlashdata('pesan', 'Artikel berhasil ditambahkan');
+        session()->setFlashdata('pesan', 'Organisasi berhasil ditambahkan');
         return redirect()->to('admin/community');
     }
 
@@ -56,7 +56,7 @@ class Community extends BaseController
         }
 
         $community->delete($id);
-        session()->setFlashdata('pesan', 'Artikel berhasil dihapus');
+        session()->setFlashdata('pesan', 'Organisasi berhasil dihapus');
         return redirect()->to('admin/community');
     }
 
@@ -93,7 +93,7 @@ class Community extends BaseController
             'thumbnail' => $thumbnailName,
         ]);
 
-        session()->setFlashdata('pesan', 'Artikel berhasil diedit');
+        session()->setFlashdata('pesan', 'Organisasi berhasil diedit');
         return redirect()->to('admin/community');
     }
 }

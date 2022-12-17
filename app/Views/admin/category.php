@@ -24,7 +24,7 @@
     <section class="section">
         <div class="row" id="basic-table">
             <div class="col-12 col-md-6">
-                <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#tambahkategori">+ Kategori baru</button>
+                <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#tambahkategori">+ Kategori</button>
 
                 <div class="modal fade text-left modal-borderless" id="tambahkategori">
                     <div class="modal-dialog" role="document">

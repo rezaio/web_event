@@ -5,15 +5,15 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>User</h3>
-                <p class="text-subtitle text-muted">Memanajemen user</p>
+                <h3>Akun</h3>
+                <p class="text-subtitle text-muted">Memanajemen akun</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         
                         <li class="breadcrumb-item"><a href="<?= base_url(); ?>/admin">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">User</li>
+                        <li class="breadcrumb-item active" aria-current="page">Akun</li>
                     </ol>
                 </nav>
             </div>
@@ -24,14 +24,14 @@
     <section class="section">
         <div class="row" id="basic-table">
             <div class="col-12 col-md-6">
-                <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#tambahuser">+ User Baru</button>
+                <button class="btn btn-primary rounded-pill mb-2" data-bs-toggle="modal" data-bs-target="#tambahuser">+ Akun Baru</button>
                 <div class="modal fade text-left modal-borderless" id="tambahuser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             
             <form action="<?= route_to('users-add'); ?>" method="POST">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Registration</h5>
+                        <h5 class="modal-title">Registrasi</h5>
                         <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
                             <i data-feather="x"></i>
                         </button>
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="roles">Roles</label>
+                            <label for="roles">Role</label>
                             <select class="form-select" name="roles" id="roles">
                                 <option value="admin">Admin</option>
                                 <option value="kontributor">Kontributor</option>
@@ -146,7 +146,7 @@
 
                                                                     <div class="modal-body">
                                                                         <p>
-                                                                            Apakah anda yakin ingin menghapus user ini?
+                                                                            Apakah anda yakin ingin menghapus akun ini?
                                                                         </p>
                                                                     </div>
                                                                     <input type="number" name="id_users" value="<?= $user['id_users']; ?>" hidden>
@@ -177,7 +177,7 @@
                 <input type="hidden" name="id_users" value="<?= $user['id_users']; ?>">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit user</h5>
+                        <h5 class="modal-title">Edit Akun</h5>
                         <button type="button" class="close rounded-pill" data-bs-dismiss="modal" aria-label="Close">
                             <i data-feather="x"></i>
                         </button>
@@ -205,7 +205,7 @@
                         </div>
             
                         <div class="form-group">
-                            <label for="roles">Roles</label>
+                            <label for="roles">Role</label>
                             <select class="form-select" name="roles" id="roles">
                                 <option value="admin" <?php if($user['roles'] == 'admin') { echo 'selected'; } ?>>Admin</option>
                                 <option value="kontributor" <?php if($user['roles'] == 'kontributor') { echo 'selected'; } ?>>Kontributor</option>

@@ -12,7 +12,7 @@
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= base_url(); ?>/admin">Dashboard</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Artikel</li>
+                        <li class="breadcrumb-item active" aria-current="page">Organisasi</li>
                     </ol>
                 </nav>
             </div>
@@ -74,7 +74,7 @@
                                             <form action="<?= route_to('community-delete'); ?>" method="POST">
                                                 <div class="modal-body">
                                                     <p>
-                                                        Apakah anda yakin ingin menghapus artikel ini?
+                                                        Apakah anda yakin ingin menghapus organisasi ini?
                                                     </p>
                                                 </div>
                                                 

@@ -19,7 +19,7 @@
         </div>
     </div>
     <section class="section">
-        <a href="<?= route_to('article-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Buat artikel</a>
+        <a href="<?= route_to('article-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Artikel</a>
 
         <?php foreach ($articles as $article) : ?>
             <div class="card mb-2">

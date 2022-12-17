@@ -43,7 +43,7 @@
             ?>
                 <div class="recent-single-post">
                   <div class="post-img">
-                    <a href="#">
+                    <a href="<?= base_url(); ?>/article/<?= $articlex['slug']; ?>">
                       <img src="<?= base_url(); ?>/img/<?= $articlex['thumbnail']; ?>" alt="">
                     </a>
                   </div>
@@ -52,6 +52,8 @@
                   </div>
                 </div>
                 <?php endforeach; ?>
+                <!-- End single post -->
+
                 <!-- End single post -->
               </div>
             </div>
@@ -78,11 +80,8 @@
       <!-- Start single blog -->
       <div class="col-md-8 col-sm-8 col-xs-12">
         <div class="row">
-
             <?php
-
-use function App\Controllers\truncateString;
-
+            use function App\Controllers\truncateString;
                 foreach($articles as $article):
             ?>
           <div class="col-md-12 col-sm-12 col-xs-12">
@@ -102,7 +101,7 @@ use function App\Controllers\truncateString;
                 </h4>
                 <p>
                     <?php
-                print(truncateString($article['description'], 500, true) . "\n");
+                print(truncateString($article['description'], 300, true) . "\n");
                 ?>
                                 
                 </p>
@@ -116,9 +115,6 @@ use function App\Controllers\truncateString;
                 endforeach;
             ?>
 
-          <!-- End single blog -->
-          <!-- Start single blog -->
-          
           <!-- <div class="blog-pagination">
             <ul class="pagination">
               <li class="page-item"><a href="#" class="page-link">&lt;</a></li>

@@ -20,7 +20,7 @@ class Home extends BaseController
 
         $article = new ArticlesModel();
         $data = [
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->limit(6)->orderBy('date', 'desc')->find(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->limit(3)->orderBy('date', 'desc')->find(),
         ];
 
         function truncateString($str, $chars, $to_space, $replacement = "...")
@@ -69,7 +69,7 @@ class Home extends BaseController
         $data = [
             'categories' => $category->findAll(),
             'article' =>  $article->join('users', 'users.id_users = articles.id_users')->join('categories', 'categories.id_categories = articles.id_categories')->where('slug', $slug)->first(),
-            'articles' => $article->limit(2)->find(),
+            'articles' => $article->limit(3)->find(),
         ];
 
         $visitor = new VisitorsModel();

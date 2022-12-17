@@ -35,7 +35,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h6 class="text-muted font-semibold">Artikel Publish</h6>
+                                    <h6 class="text-muted font-semibold">Jumlah Artikel</h6>
                                     <h6 class="font-extrabold mb-0"><?= $article; ?></h6>
                                 </div>
                             </div>

@@ -82,7 +82,7 @@ use function App\Controllers\truncateString;
                   </h4>
                   <p>
                   <?php
-                print(truncateString($article['description'], 500, true) . "\n");
+                print(truncateString($article['description'], 300, true) . "\n");
                 ?>
                   </p>
                 </div>
