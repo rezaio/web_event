@@ -50,7 +50,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="<?= base_url(); ?>/index.php">Home</a></li>
+          <li><a class="nav-link scrollto active" href="<?= base_url(); ?>/index.php">Beranda</a></li>
           <li><a class="nav-link scrollto" href="<?= base_url(); ?>/calendar">Kalender</a></li>
           <li><a class="nav-link scrollto" href="<?= base_url(); ?>/community">Organisasi</a></li>
           <li><a href="<?= base_url(); ?>/article">Artikel</a></li>

@@ -98,7 +98,7 @@
                             <li class="sidebar-item <?= get_url(3, 'users') ? 'active' : '' ?>">
                                 <a data-turbolinks="false" href="<?= route_to('users'); ?>" class='sidebar-link'>
                                     <i class="bi bi-people-fill"></i>
-                                    <span>Manajemen Akun</span>
+                                    <span>Manajemen Pengguna</span>
                                 </a>
                             </li>
                         <?php endif; ?>
@@ -106,7 +106,7 @@
                         <li class="sidebar-item">
                             <a href="<?= route_to('logout'); ?>" class='sidebar-link'>
                                 <i class="bi bi-box-arrow-right"></i>
-                                <span>Log out</span>
+                                <span>Keluar</span>
                             </a>
                         </li>
 

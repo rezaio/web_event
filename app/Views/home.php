@@ -87,7 +87,7 @@ use function App\Controllers\truncateString;
                   </p>
                 </div>
                 <span>
-                  <a href="<?= base_url(); ?>/article/<?= $article['slug']; ?>" class="ready-btn">Read more</a>
+                  <a href="<?= base_url(); ?>/article/<?= $article['slug']; ?>" class="ready-btn">Selengkapnya</a>
                 </span>
               </div>
               
