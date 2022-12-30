@@ -44,7 +44,7 @@
                 <div class="recent-single-post">
                   <div class="post-img">
                     <a href="<?= base_url(); ?>/article/<?= $articlex['slug']; ?>">
-                      <img src="<?= base_url(); ?>/img/<?= $articlex['thumbnail']; ?>" alt="">
+                      <img class="amc" src="<?= base_url(); ?>/img/<?= $articlex['thumbnail']; ?>" alt="">
                     </a>
                   </div>
                   <div class="pst-content">

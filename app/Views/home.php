@@ -67,8 +67,8 @@ use function App\Controllers\truncateString;
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="single-blog">
                 <div class="single-blog-img">
-                  <a href="blog.html">
-                    <img src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="">
+                  <a href="">
+                    <img class="imc" src="<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>" alt="">
                   </a>
                 </div>
                 <div class="blog-meta">
@@ -87,7 +87,7 @@ use function App\Controllers\truncateString;
                   </p>
                 </div>
                 <span>
-                  <a href="<?= base_url(); ?>/article/<?= $article['slug']; ?>" class="ready-btn">Selengkapnya</a>
+                  <a href="<?= base_url(); ?>/article/<?= $article['slug']; ?>" class="ready-btn">Baca Selengkapnya</a>
                 </span>
               </div>
               
