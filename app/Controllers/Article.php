@@ -12,7 +12,9 @@ class Article extends BaseController
         $category = new CategoriesModel();
         $data = [
             'categories' => $category->findAll(),
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->findAll(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories'),
+            'articles' => $article->paginate(4, 'articles'),
+            'pager' => $article->pager
         ];
         echo view('admin/article', $data);
     }

@@ -9,7 +9,9 @@ class Community extends BaseController
     {
         $community = new CommunityModel();
         $data = [
-            'community' => $community->findAll(),
+            // 'community' => $community->findAll(),
+            'community' => $community->paginate(4, 'community'),
+            'pager' => $community->pager
         ];
         echo view('admin/community', $data);
     }

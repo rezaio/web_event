@@ -17,7 +17,7 @@
             <div class="carousel-container">
               <div class="container">
                 <h2 class="">Selamat Datang Di Website</h2>
-                <p class="">Agenda UKM Dan Ormawa Politeknik Negeri Lampung</p>
+                <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
               
               </div>
             </div>

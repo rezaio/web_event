@@ -12,7 +12,9 @@ class Users extends BaseController
 
         $user       = new UsersModel();
         $data = [
-            'users'  => $user->findAll(),
+            // 'users'  => $user->findAll(),
+            'users' => $user->paginate(4, 'users'),
+            'pager' => $user->pager
         ];
         return view('admin/users', $data);
     }

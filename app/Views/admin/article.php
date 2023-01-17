@@ -102,7 +102,8 @@
                 </div>
             </div>
         <?php endforeach; ?>
-
+                                        
     </section>
+    <?= $pager->links('articles', 'event_pagination'); ?>
 </div>
 <?= $this->endSection(); ?>

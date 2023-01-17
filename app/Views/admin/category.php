@@ -153,6 +153,7 @@
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
+                                <?= $pager->links('categories', 'event_pagination'); ?>
                             </div>
                         </div>
                     </div>

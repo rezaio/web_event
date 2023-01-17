@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="modal-body">
-                        <div class="form-group has-icon-left">
+                        <!-- <div class="form-group has-icon-left">
                             <label for="name">Nama</label>
                             <div class="position-relative">
                                 <input type="text" name="name" class="form-control" placeholder="Masukkan nama" id="name">
@@ -46,6 +46,20 @@
                                     <i class="bi bi-person"></i>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <select class="form-select" name="name" id="name">
+                                <option value="BEM">BEM</option>
+                                <option value="UKM_Albanna">UKM Albanna</option>
+                                <option value="UKM_Sukma">UKM Sukma</option>
+                                <option value="UKM_Kopma">UKM Kopma</option>
+                                <option value="UKM_Garda">UKM Garda</option>
+                                <option value="UKM_Poltapala">UKM Poltapala</option>
+                                <option value="UKM_Olahraga">UKM Olahraga</option>
+                                <option value="UKM_BidangSeni">UKM Bidang Seni</option>
+                                <option value="UKM_EnglishClub">UKM English Club</option>
+                            </select>
                         </div>
             
                         <div class="form-group has-icon-left">
@@ -130,6 +144,7 @@
                                                             </li>
 
                                                         </ul>
+                                                        
 
                                                         <!--Hapus User Modal Content -->
                                                         <div class="modal fade text-left modal-borderless" id="hapususer<?= $user['id_users']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
@@ -170,7 +185,8 @@
                                                 </tr>
 
                                                 <div class="modal fade text-left modal-borderless" id="edituser<?= $user['id_users']; ?>" >
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
+
+                                                <div class="modal-dialog modal-dialog-scrollable" role="document">
             
             <form action="<?= route_to('users-update'); ?>" method="POST">
             
@@ -183,7 +199,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div class="form-group has-icon-left">
+                        <!-- <div class="form-group has-icon-left">
                             <label for="name">Nama</label>
                             <div class="position-relative">
                                 
@@ -192,8 +208,24 @@
                                     <i class="bi bi-person"></i>
                                 </div>
                             </div>
+                        </div> -->
+                        
+                        <div class="form-group">
+                            <label for="roles">Nama</label>
+                            <select class="form-select" name="name" id="name">
+                                <option value="BEM" <?php if($user['name'] == 'BEM') { echo 'selected'; } ?>>BEM</option>
+                                <option value="UKM_Albanna" <?php if($user['name'] == 'UKM_Albanna') { echo 'selected'; } ?>>UKM Albanna</option>
+                                <option value="UKM_Sukma" <?php if($user['name'] == 'UKM_Sukma') { echo 'selected'; } ?>>UKM Sukma</option>
+                                <option value="UKM_Kopma" <?php if($user['name'] == 'UKM_Kopma') { echo 'selected'; } ?>>UKM Kopma</option>
+                                <option value="UKM_Garda" <?php if($user['name'] == 'UKM_Garda') { echo 'selected'; } ?>>UKM Garda</option>
+                                <option value="UKM_Poltapala" <?php if($user['name'] == 'UKM_Poltapala') { echo 'selected'; } ?>>UKM Poltapala</option>
+                                <option value="UKM_Olahraga" <?php if($user['name'] == 'UKM_Olahraga') { echo 'selected'; } ?>>UKM Olahraga</option>
+                                <option value="UKM_BidangSeni" <?php if($user['name'] == 'UKM_BidangSeni') { echo 'selected'; } ?>>UKM BidangSeni</option>
+                                <option value="UKM_EnglishClub" <?php if($user['name'] == 'UKM_EnglishClub') { echo 'selected'; } ?>>UKM EnglishClub</option>
+                            </select>
                         </div>
-            
+
+
                         <div class="form-group has-icon-left">
                             <label for="username">Username</label>
                             <div class="position-relative">
@@ -241,6 +273,7 @@
 
                                         </tbody>
                                     </table>
+                                    <?= $pager->links('users', 'event_pagination'); ?>
                                 </div>
                             </div>
                         </div>

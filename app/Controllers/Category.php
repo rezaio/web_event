@@ -9,7 +9,9 @@ class Category extends BaseController
     {
         $category = new CategoriesModel();
         $data = [
-            'categories' => $category->findAll(),
+            // 'categories' => $category->findAll(),
+            'categories' => $category->paginate(3, 'categories'),
+            'pager' => $category->pager
         ];
         return view('admin/category', $data);
     }

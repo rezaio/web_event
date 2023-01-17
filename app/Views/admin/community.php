@@ -90,19 +90,20 @@
 
                                                 </div>
                                             </form>
-
+                                            
                                         </div>
                                     </div>
                                 </div>
-
+                                        
                             </div>
                         </div>
-
+                                        
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
 
     </section>
+    <?= $pager->links('community', 'event_pagination'); ?>
 </div>
 <?= $this->endSection(); ?>
