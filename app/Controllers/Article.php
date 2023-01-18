@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\ArticlesModel;
 use App\Models\CategoriesModel;
+use App\Models\VisitorsModel;
 
 class Article extends BaseController
 {
@@ -12,10 +13,11 @@ class Article extends BaseController
         $category = new CategoriesModel();
         $data = [
             'categories' => $category->findAll(),
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories'),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => session()->get('id_users')]),
             'articles' => $article->paginate(4, 'articles'),
             'pager' => $article->pager
         ];
+        $roles = session()->get('roles');
         echo view('admin/article', $data);
     }
 
@@ -38,6 +40,8 @@ class Article extends BaseController
             $thumbnail->move('img', $thumbnailName);
         }
 
+        $roles = session()->get('roles');
+
         $slug = url_title($this->request->getPost('title'), '-', true);
         $article  = new ArticlesModel();
         $article->save([
@@ -48,6 +52,7 @@ class Article extends BaseController
             'date' => date("Y-m-d"),
             'id_users' => session()->get('id_users'),
             'id_categories' => $this->request->getPost('id_categories'),
+            'status' => $roles == 'admin' ? 1 : 2,
         ]);
 
         session()->setFlashdata('pesan', 'Artikel berhasil ditambahkan');
@@ -94,6 +99,7 @@ class Article extends BaseController
             unlink('img/'. $data['thumbnail']);
         }
 
+        $roles = session()->get('roles');
         $slug = url_title($this->request->getPost('title'), '-', true);
         $article->replace([
             'slug' => $slug,
@@ -107,5 +113,42 @@ class Article extends BaseController
         ]);
         session()->setFlashdata('pesan', 'Artikel berhasil diedit');
         return redirect()->to('admin/article');
+    }
+
+    public function verificationView()
+    {
+        $article = new ArticlesModel();
+        $category = new CategoriesModel();
+        $data = [
+            'categories' => $category->findAll(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 2),
+            'articles' => $article->paginate(4, 'articles'),
+            'pager' => $article->pager
+        ];
+        echo view('admin/article-verification', $data);
+    }
+
+    public function verification()
+    {
+        $article = new ArticlesModel();
+
+        $data = [
+            'status' => 1,
+        ];
+
+        $article->update( $this->request->getPost('id_articles') , $data);
+        return redirect()->to('admin/article/verification');
+    }
+
+    public function review($slug)
+    {
+        $article = new ArticlesModel();
+        $category = new CategoriesModel();
+        $data = [
+            'categories' => $category->findAll(),
+            'article' =>  $article->join('users', 'users.id_users = articles.id_users')->join('categories', 'categories.id_categories = articles.id_categories')->where('slug', $slug)->first(),
+            'articles' => $article->limit(3)->find(),
+        ];
+        return view('admin/article-review', $data);
     }
 }

@@ -151,7 +151,20 @@
             tabsize: 2,
             height: 320,
         })
-    </script>
+        </script>
+        
+        <?php
+        if (get_url(4, 'review')) {
+            ?>
+
+            <script>
+                $('#summernote').summernote('disable');
+                </script>
+
+        <?php
+        }
+        ?>
+
     <?php if (session()->getFlashdata('pesan')) : ?>
         <script>
             Swal.fire(

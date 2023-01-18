@@ -20,7 +20,7 @@ class Home extends BaseController
 
         $article = new ArticlesModel();
         $data = [
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->limit(3)->orderBy('date', 'desc')->find(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->limit(3)->where('status', 1)->orderBy('date', 'desc')->find(),
         ];
 
         function truncateString($str, $chars, $to_space, $replacement = "...")
@@ -44,7 +44,7 @@ class Home extends BaseController
         $category = new CategoriesModel();
         $data = [
             'categories' => $category->findAll(),
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->orderBy('date', 'desc')->findAll(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc')->findAll(),
         ];
 
         function truncateString($str, $chars, $to_space, $replacement = "...")
@@ -108,12 +108,12 @@ class Home extends BaseController
         $article = new ArticlesModel();
         if ($keyword == '') {
             $data = [
-                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->orderBy('date', 'desc')->findAll(),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc')->findAll(),
             ];
             return view('article', $data);
         } else {
             $data = [
-                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->orderBy('date', 'desc')->like('title', $keyword)->findAll(),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc')->like('title', $keyword)->findAll(),
                 'keyword' => $keyword,
             ];
             return view('search', $data);
