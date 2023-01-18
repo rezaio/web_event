@@ -81,3 +81,288 @@ in APPPATH/Views/layouts/admin.php on line 157.
  7 SYSTEMPATH/CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest()
  8 FCPATH/index.php(55): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2023-01-17 20:59:36 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:00:59 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 21:03:13 --> Unknown column 'status' in 'where clause'
+CRITICAL - 2023-01-17 21:03:13 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = :status:
+ORDER BY `date` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH\Model.php(184): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Home.php(23): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 21:03:15 --> Unknown column 'status' in 'where clause'
+CRITICAL - 2023-01-17 21:03:15 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = :status:
+ORDER BY `date` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH\Model.php(184): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Home.php(23): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 21:03:16 --> Unknown column 'status' in 'where clause'
+CRITICAL - 2023-01-17 21:03:16 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = 1
+ORDER BY `date` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `articles`
+JOIN `categories` ON `categories`.`id_categories` = `articles`.`id_categories`
+WHERE `status` = :status:
+ORDER BY `date` DESC
+ LIMIT 3', [...], false)
+ 5 SYSTEMPATH\Model.php(184): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Controllers\Home.php(23): CodeIgniter\BaseModel->find()
+ 8 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:06:00 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:07:34 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:07:54 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:09:15 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:13:51 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:15:34 --> Request URI segment is out of range: 3
+in SYSTEMPATH\HTTP\URI.php on line 529.
+ 1 SYSTEMPATH\HTTP\URI.php(529): CodeIgniter\HTTP\Exceptions\HTTPException::forURISegmentOutOfRange(3)
+ 2 SYSTEMPATH\Helpers\url_helper.php(111): CodeIgniter\HTTP\URI->getSegment(3)
+ 3 APPPATH\Views\layouts\admin.php(157): get_url(4, 'review')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layouts\\admin.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/admin', [], true)
+ 7 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/home', [], true)
+ 8 APPPATH\Controllers\Admin.php(21): view('admin/home', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Admin->index()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:31:02 --> Undefined variable: user
+in APPPATH\Views\admin\article.php on line 23.
+ 1 APPPATH\Views\admin\article.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\admin\\article.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/article', [], true)
+ 5 APPPATH\Controllers\Article.php(21): view('admin/article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:31:07 --> Undefined variable: user
+in APPPATH\Views\admin\article.php on line 23.
+ 1 APPPATH\Views\admin\article.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\admin\\article.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/article', [], true)
+ 5 APPPATH\Controllers\Article.php(21): view('admin/article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:31:44 --> Undefined variable: user
+in APPPATH\Views\admin\article.php on line 23.
+ 1 APPPATH\Views\admin\article.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\admin\\article.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/article', [], true)
+ 5 APPPATH\Controllers\Article.php(21): view('admin/article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:31:45 --> Undefined variable: user
+in APPPATH\Views\admin\article.php on line 23.
+ 1 APPPATH\Views\admin\article.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\admin\\article.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/article', [], true)
+ 5 APPPATH\Controllers\Article.php(21): view('admin/article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:33:41 --> Undefined variable: user
+in APPPATH\Views\admin\article.php on line 23.
+ 1 APPPATH\Views\admin\article.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user', 'APPPATH\\Views\\admin\\article.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\article.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/article', [], true)
+ 5 APPPATH\Controllers\Article.php(21): view('admin/article', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Article->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Article))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

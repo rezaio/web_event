@@ -153,17 +153,7 @@
         })
         </script>
         
-        <?php
-        if (get_url(4, 'review')) {
-            ?>
-
-            <script>
-                $('#summernote').summernote('disable');
-                </script>
-
-        <?php
-        }
-        ?>
+        
 
     <?php if (session()->getFlashdata('pesan')) : ?>
         <script>
