@@ -20,7 +20,10 @@
     </div>
     <section class="section">
         <a href="<?= route_to('article-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Artikel</a>
+        
+        <?php if ($user['roles'] == 'admin') { ?>
         <a class="btn rounded-pill mb-2" href="<?= route_to('article-verification-view'); ?>">Verifikasi Artikel</a>
+        <?php } ?>
 
         <?php foreach ($articles as $article) : ?>
             <div class="card mb-2">
