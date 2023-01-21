@@ -48,17 +48,12 @@
                             </div>
                         </div> -->
                         <div class="form-group">
+                            
                             <label for="name">Nama</label>
-                            <select class="form-select" name="name" id="name">
-                                <option value="BEM">BEM</option>
-                                <option value="UKM_Albanna">UKM Albanna</option>
-                                <option value="UKM_Sukma">UKM Sukma</option>
-                                <option value="UKM_Kopma">UKM Kopma</option>
-                                <option value="UKM_Garda">UKM Garda</option>
-                                <option value="UKM_Poltapala">UKM Poltapala</option>
-                                <option value="UKM_Olahraga">UKM Olahraga</option>
-                                <option value="UKM_BidangSeni">UKM Bidang Seni</option>
-                                <option value="UKM_EnglishClub">UKM English Club</option>
+                            <select class="form-select" name="id_community" id="name">
+                                <?php foreach ($community as $communitys){ ?>
+                                <option value="<?= $communitys['id_community']; ?>"><?= $communitys['name']; ?></option>
+                                <?php } ?>
                             </select>
                         </div>
             
@@ -199,29 +194,14 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- <div class="form-group has-icon-left">
-                            <label for="name">Nama</label>
-                            <div class="position-relative">
-                                
-                                <input value="<?= $user['name']; ?>" type="text" name="name" class="form-control" placeholder="Masukkan nama" id="name">
-                                <div class="form-control-icon">
-                                    <i class="bi bi-person"></i>
-                                </div>
-                            </div>
-                        </div> -->
+
                         
                         <div class="form-group">
                             <label for="roles">Nama</label>
-                            <select class="form-select" name="name" id="name">
-                                <option value="BEM" <?php if($user['name'] == 'BEM') { echo 'selected'; } ?>>BEM</option>
-                                <option value="UKM_Albanna" <?php if($user['name'] == 'UKM_Albanna') { echo 'selected'; } ?>>UKM Albanna</option>
-                                <option value="UKM_Sukma" <?php if($user['name'] == 'UKM_Sukma') { echo 'selected'; } ?>>UKM Sukma</option>
-                                <option value="UKM_Kopma" <?php if($user['name'] == 'UKM_Kopma') { echo 'selected'; } ?>>UKM Kopma</option>
-                                <option value="UKM_Garda" <?php if($user['name'] == 'UKM_Garda') { echo 'selected'; } ?>>UKM Garda</option>
-                                <option value="UKM_Poltapala" <?php if($user['name'] == 'UKM_Poltapala') { echo 'selected'; } ?>>UKM Poltapala</option>
-                                <option value="UKM_Olahraga" <?php if($user['name'] == 'UKM_Olahraga') { echo 'selected'; } ?>>UKM Olahraga</option>
-                                <option value="UKM_BidangSeni" <?php if($user['name'] == 'UKM_BidangSeni') { echo 'selected'; } ?>>UKM BidangSeni</option>
-                                <option value="UKM_EnglishClub" <?php if($user['name'] == 'UKM_EnglishClub') { echo 'selected'; } ?>>UKM EnglishClub</option>
+                            <select class="form-select" name="id_community" id="name">
+                            <?php foreach ($community as $communitys){ ?>
+                                <option value="<?= $communitys['id_community'];?>" <?php if($user['id_community'] == $communitys['id_community']) { echo 'selected'; } ?>><?= $communitys['name'];?></option>
+                                <?php } ?>
                             </select>
                         </div>
 

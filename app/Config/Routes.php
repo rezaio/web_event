@@ -71,6 +71,7 @@ $routes->get('/admin/article/edit/(:num)', 'Article::edit/$1', ['as' => 'article
 $routes->post('/admin/article/update', 'Article::update', ['as' => 'article-update', 'filter' => 'auth']);
 
 $routes->get('/admin/article/review/(:segment)', 'Article::review/$1', ['as' => 'article-review',  'filter' => 'auth:admin']);
+$routes->get('/admin/article/filter/(:segment)', 'Article::filter/$1', ['as' => 'article-filter',  'filter' => 'auth:admin']);
 $routes->get('/admin/article/verification', 'Article::verificationView', ['as' => 'article-verification-view', 'filter' => 'auth:admin']);
 $routes->post('/admin/article/verification', 'Article::verification', ['as' => 'article-verification', 'filter' => 'auth:admin']);
 

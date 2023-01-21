@@ -25,13 +25,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12"> 
-          <?php
-                foreach($community as $communitys):
-            ?>
+          
           </div>
         </div>
-
-        <div class="row">
+        <?php
+                foreach($community as $communitys):
+            ?>
+        <div class="row mx-1" style="
+    margin-bottom: 50px;">
           <!-- single-well start-->
           <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="pict">
@@ -55,12 +56,20 @@
                 <p>
                 <?= $communitys['description']; ?>
               </p>
-              </div>
-              <?php endforeach; ?>
+            </div>
+            <a class="btn btn-primary" href="https://kemahasiswaan.polinela.ac.id/">Kunjungi Website -></a>
             </div>
           </div>
           <!-- End col-->
+          
+        
         </div>
+        <?php endforeach; ?>
+        <div class="blog-pagination">
+            <ul class="pagination">
+            <?= $pager->links('community', 'event_pagination'); ?>
+            </ul>
+          </div>
       </div>
     </div><!-- End About Section -->
 

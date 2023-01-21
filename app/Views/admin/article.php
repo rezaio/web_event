@@ -21,9 +21,21 @@
     <section class="section">
         <a href="<?= route_to('article-add'); ?>" class="btn btn-primary rounded-pill mb-2">+ Artikel</a>
         
-        
-        <a class="btn rounded-pill mb-2" href="<?= route_to('article-verification-view'); ?>">Verifikasi Artikel</a>
-         
+        <?php if ($user['roles'] == 'admin') { ?>
+        <a class="btn btn-primary rounded-pill mb-2" href="<?= route_to('article-verification-view'); ?>">Verifikasi Artikel</a>
+        <div class="dropdown d-inline-flex">
+<button class="btn btn-primary mb-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+Filter Artikel
+</button>
+<ul class="dropdown-menu">
+<?php foreach($community as $communitys): ?>
+
+<li><a class="dropdown-item" href="<?= base_url(); ?>/admin/article/filter/<?= $communitys['id_community']; ?>"><?= $communitys['name']; ?></a></li>
+<?php endforeach; ?>
+
+</ul>
+</div>
+        <?php } ?>
 
         <?php foreach ($articles as $article) : ?>
             <div class="card mb-2">

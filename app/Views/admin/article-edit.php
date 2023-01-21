@@ -32,6 +32,7 @@
                                         <div class="form-group">
                                             <label for="first-name-vertical">Judul</label>
                                             <input name="title" type="text" id="first-name-vertical" class="form-control {{$errors->first('title') ? "is-invalid" : ""}}" name="title" placeholder="Masukkan judul artikel" value="<?= $article['title']; ?>">
+                                            <input name="status" value="<?= $article['status']; ?>" hidden>
                                             <div class="invalid-feedback">
                                                 {{$errors->first('title')}}
                                             </div>

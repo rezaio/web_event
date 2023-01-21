@@ -24,7 +24,7 @@ class Auth extends BaseController
             if ($verify_pass) {
                 $ses_data = [
                     'id_users'   => $data['id_users'],
-                    'name'      => $data['name'],
+                    'id_community'   => $data['id_community'],
                     'roles'      => $data['roles'],
                     'username'  => $data['username'],
                     'logged_in' => TRUE

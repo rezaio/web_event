@@ -13,12 +13,13 @@ class Admin extends BaseController
         $article    = new ArticlesModel();
         $visitor    = new VisitorsModel();
         $data = [
-            'user'  => $user->find(session()->get('id_users')),
+            'user'  => $user->join('community', 'community.id_community = users.id_community')->find(session()->get('id_users')),
             'visitor_lab' => $visitor->where('DAY(created_at)', date('d'))->where('type', 1)->countAllResults(),
             'visitor_web' => $visitor->where('DAY(created_at)', date('d'))->where('type', 2)->countAllResults(),
             'article' => $article->countAllResults(),
         ];
-        return view('admin/home', $data);
+        // var_dump($data['user']);
+        return view('admin/home',$data);
     }
 
     public function statistic()

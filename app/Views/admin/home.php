@@ -8,6 +8,8 @@
     <section class="row">
         <div class="col-12 col-lg-12">
             <div class="row">
+
+            <?php if ($_SESSION['roles'] == 'admin') : ?>
                 <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body px-3 py-4-5">
@@ -25,6 +27,9 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+
+                <?php if ($_SESSION['roles'] == 'admin') : ?>
                 <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body px-3 py-4-5">
@@ -42,14 +47,12 @@
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="col-sm-12 col-md-6 col-lg-3 col-6">
                     <div class="card">
                         <div class="card-body py-4 px-5">
                             <div class="d-flex align-items-center">
-                                <div class="avatar avatar-xl">
-                                    <img src="<?= base_url(); ?>/assets/images/faces/2.jpg" alt="Face 1">
-                                </div>
-                                <div class="ms-3 name">
+                                <div class="ms-0 name">
                                     <h5 class="font-bold"><?= $user['name']; ?></h5>
                                     <h6 class="text-muted mb-0">@<?= $user['username']; ?></h6>
                                 </div>

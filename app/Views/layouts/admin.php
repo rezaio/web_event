@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Admin</title>
+    <title>Agenda Kegiatan</title>
 
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/main/app.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/main/app-dark.css">
@@ -153,7 +153,17 @@
         })
         </script>
         
-        
+        <?php
+        // if (get_url(4, 'review')) {
+            ?>
+
+            <script>
+                // $('#summernote').summernote('disable');
+                </script>
+
+        <?php
+        // }
+        ?>
 
     <?php if (session()->getFlashdata('pesan')) : ?>
         <script>

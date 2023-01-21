@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use App\Models\ArticlesModel;
 use App\Models\CategoriesModel;
+use App\Models\CommunityModel;
+use App\Models\UsersModel;
 use App\Models\VisitorsModel;
 
 class Article extends BaseController
@@ -10,15 +12,32 @@ class Article extends BaseController
     public function index()
     {
         $article = new ArticlesModel();
+        $user = new UsersModel();
         $category = new CategoriesModel();
-        $data = [
-            'categories' => $category->findAll(),
-            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => session()->get('id_users')]),
-            'articles' => $article->paginate(4, 'articles'),
-            'pager' => $article->pager
-        ];
+        $community = new CommunityModel();
+
         $roles = session()->get('roles');
-        echo view('admin/article', $data);
+        if ($roles == 'admin' ) {
+            $data = [
+                'user'  => $user->find(session()->get('id_users')),
+                'categories' => $category->findAll(),
+                'community' => $community->findAll(),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1),
+                'articles' => $article->paginate(4, 'articles'),
+                'pager' => $article->pager
+            ];
+            echo view('admin/article', $data);
+        } else {
+            $data = [
+                'user'  => $user->find(session()->get('id_users')),
+                'categories' => $category->findAll(),
+                'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => session()->get('id_users')]),
+                'articles' => $article->paginate(4, 'articles'),
+                'pager' => $article->pager
+            ];
+            echo view('admin/article', $data);
+        }
+
     }
 
     public function add()
@@ -106,6 +125,7 @@ class Article extends BaseController
             'id_articles' => $this->request->getVar('id_articles'),
             'title' => $this->request->getVar('title'),
             'description' => $this->request->getVar('description'),
+            'status' => $this->request->getVar('status'),
             'thumbnail' => $thumbnailName,
             'date' => $data['date'],
             'id_users' => $data['id_users'],
@@ -150,5 +170,23 @@ class Article extends BaseController
             'articles' => $article->limit(3)->find(),
         ];
         return view('admin/article-review', $data);
+    }
+
+    public function filter($slug)
+    {
+        $article = new ArticlesModel();
+        $user = new UsersModel();
+        $category = new CategoriesModel();
+        $community = new CommunityModel();
+        
+        $data = [
+            'user'  => $user->find(session()->get('id_users')),
+            'categories' => $category->findAll(),
+            'community' => $community->findAll(),
+            'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where(['status' => 1, 'id_users' => $slug]),
+            'articles' => $article->paginate(4, 'articles'),
+            'pager' => $article->pager
+        ];
+        echo view('admin/article', $data);
     }
 }

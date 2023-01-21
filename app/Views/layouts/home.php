@@ -51,7 +51,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="<?= base_url(); ?>/index.php">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="<?= base_url(); ?>/calendar">Kalender</a></li>
+          <!-- <li><a class="nav-link scrollto" href="/calendar">Kalender</a></li> -->
           <li><a class="nav-link scrollto" href="<?= base_url(); ?>/community">Organisasi</a></li>
           <li><a href="<?= base_url(); ?>/article">Artikel</a></li>
           <li><a class="nav-link scrollto" href="<?= base_url(); ?>/login">Login</a></li>
@@ -75,7 +75,7 @@
                   <h2><span>Agenda</span> Kegiatan</h2>
                 </div>
 
-                <p>website, yang menjadi suatu wadah bagi Ormawa dan UKM yang ada di Polinela untuk mempublikasi kegiatan yang akan dilaksanakan dan sebagai rekam jejak  kegiatan UKM dan Ormawa agar kegiatan tersimpan ke dalam database kegiatan sehingga memudahkan dalam mencari histori kegiatan yang sudah dilakukan sebelumnya <div class="footer-icons">
+                <p>Website ini, Merupakan website untuk mempublikasi kegiatan yang akan dilaksanakan dan sebagai rekam jejak kegiatan UKM dan Ormawa agar kegiatan tersimpan ke dalam database kegiatan sehingga memudahkan dalam mencari histori kegiatan organisasi yang sudah dilakukan sebelumnya <div class="footer-icons">
                   <ul>
                     <li>
                       <a href="#"><i class="bi bi-facebook"></i></a>
@@ -100,14 +100,14 @@
           <div class="col-md-4">
             <div class="footer-content">
               <div class="footer-head">
-                <h4>informasi</h4>
+                <h4>Informasi website</h4>
                 <p>
-                  Jl. Soekarno Hatta No.10, Rajabasa Raya, Kec. Rajabasa, Kota Bandar Lampung, Lampung 35144  
+                  Jika terdapat kesulitan pada web atau kurang paham mengenai penggunaan web ini,Untuk informasi lebih lanjut dapat menghubungi BEM divisi KOMINFO Politeknik Negeri Lampung
                 </p>
                 <div class="footer-contacts">
                   <p><span>Tel:</span> 085379916605</p>
-                  <p><span>Email:</span> agendaukm@gmail.com</p>
-                  <p><span>Buka:</span> 9am-5pm</p>
+                  <p><span>Email:</span> bem@polinela.ac.id</p>
+                  <p><span>Website:</span> bem.kemahasiswaan.polinela.ac.id </p>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="copyright text-center">
               <p>
-                &copy; Copyright <strong>ahoyy</strong>. All Rights Reserved
+                &copy; Copyright <strong>eja</strong>. All Rights Reserved
               </p>
             </div>
             <div class="credits">

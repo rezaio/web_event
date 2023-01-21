@@ -10,10 +10,26 @@
         <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-        <?php
-                foreach($articles as $article):
-            ?>
-          <div class="carousel-item active" style="background-image: url(<?= base_url(); ?>/img/<?= $article['thumbnail']; ?>)">
+ 
+          <div class="carousel-item active" style="background-image: url('assets/img/header/k1.jpg')">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="">Selamat Datang Di Website</h2>
+                <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
+              
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active" style="background-image: url('assets/img/header/k2.jpg')">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="">Selamat Datang Di Website</h2>
+                <p class="">Agenda Ormawa Dan UKM Politeknik Negeri Lampung</p>
+              
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active" style="background-image: url('assets/img/header/k4.jpeg')">
             <div class="carousel-container">
               <div class="container">
                 <h2 class="">Selamat Datang Di Website</h2>
@@ -23,9 +39,6 @@
             </div>
           </div>
 
-          <?php
-                endforeach;
-            ?>
 
 
         </div>
@@ -136,20 +149,6 @@ use function App\Controllers\truncateString;
           <div class="item">
             <img src="assets/img/organisasi/bem.jpg" alt="">
           </div>
-          <div class="item">
-            <img src="assets/img/organisasi/ekbis.png" alt="">
-          </div>
-          <div class="item">
-            <img src="assets/img/organisasi/himabu.png" alt="">
-          </div>
-          <div class="item">
-            <img src="assets/img/organisasi/pertanian.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="assets/img/organisasi/pangan.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="assets/img/organisasi/peternakan.jpg" alt="">
           </div>
         </div>
         </a>

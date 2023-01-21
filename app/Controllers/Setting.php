@@ -7,9 +7,10 @@ class Setting extends BaseController
 {
     public function index()
     {
-        $user       = new UsersModel();
+        $user = new UsersModel();
         $data = [
-            'user'  => $user->find(session()->get('id_users')),
+            // 'user'  => $user->find(session()->get('id_users')),
+            'user'  => $user->join('community', 'community.id_community = users.id_community')->find(session()->get('id_users')),
         ];
         return view('admin/setting', $data);
     }

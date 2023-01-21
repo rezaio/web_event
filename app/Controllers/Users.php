@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CommunityModel;
 use App\Models\UsersModel;
 
 class Users extends BaseController
@@ -11,8 +12,11 @@ class Users extends BaseController
     {
 
         $user       = new UsersModel();
+        $community  = new CommunityModel();
+
         $data = [
-            // 'users'  => $user->findAll(),
+            'community'  => $community->findAll(),
+            'users' => $user->join('community', 'community.id_community = users.id_community'),
             'users' => $user->paginate(4, 'users'),
             'pager' => $user->pager
         ];
@@ -23,7 +27,7 @@ class Users extends BaseController
     {
         $user = new UsersModel();
         $user->save([
-            'name' => $this->request->getVar('name'),
+            'id_community' => $this->request->getVar('id_community'),
             'username' => $this->request->getVar('username'),
             'roles' => $this->request->getVar('roles'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
@@ -47,7 +51,7 @@ class Users extends BaseController
         $data = $user->find($this->request->getVar('id_users'));
         $user->replace([
             'id_users' => $this->request->getVar('id_users'),
-            'name' => $this->request->getVar('name'),
+            'id_community' => $this->request->getVar('id_community'),
             'roles' => $this->request->getVar('roles'),
             'username' => $this->request->getVar('username'),
             'password' => empty($this->request->getVar('password')) ? $data['password'] : password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),

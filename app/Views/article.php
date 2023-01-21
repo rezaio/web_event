@@ -101,7 +101,7 @@
                 </h4>
                 <p>
                     <?php
-                print(truncateString($article['description'], 300, true) . "\n");
+                print(truncateString($article['description'], 100, true) . "\n");
                 ?>
                                 
                 </p>
@@ -114,16 +114,12 @@
             <?php
                 endforeach;
             ?>
-
-          <!-- <div class="blog-pagination">
+      
+          <div class="blog-pagination">
             <ul class="pagination">
-              <li class="page-item"><a href="#" class="page-link">&lt;</a></li>
-              <li class="page-item active"><a href="#" class="page-link">1</a></li>
-              <li class="page-item"><a href="#" class="page-link">2</a></li>
-              <li class="page-item"><a href="#" class="page-link">3</a></li>
-              <li class="page-item"><a href="#" class="page-link">&gt;</a></li>
+            <?= $pager->links('articles', 'event_pagination'); ?>
             </ul>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

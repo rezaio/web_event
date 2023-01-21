@@ -45,6 +45,8 @@ class Home extends BaseController
         $data = [
             'categories' => $category->findAll(),
             'articles' => $article->join('categories', 'categories.id_categories = articles.id_categories')->where('status', 1)->orderBy('date', 'desc')->findAll(),
+            'articles' => $article->paginate(2, 'articles'),
+            'pager' => $article->pager
         ];
 
         function truncateString($str, $chars, $to_space, $replacement = "...")
@@ -130,7 +132,9 @@ class Home extends BaseController
 
         $community = new CommunityModel();
         $data = [
-            'community' => $community->findAll(),
+            // 'community' => $community->findAll(),
+            'community' => $community->paginate(2, 'community'),
+            'pager' => $community->pager
         ];
 
         function truncateString($str, $chars, $to_space, $replacement = "...")
